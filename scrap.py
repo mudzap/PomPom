@@ -80,8 +80,9 @@ def get_diff_threads(ids, times, new_ids, new_times):
     # If times[new_ids] != new_times[new_ids], return new_id
     #old_set = set(ids)
     #new_set = set(new_ids)
-    #ret_set = new_set.difference(old_set) #NOT NEEDED, IMPLICIT
+    #ret_set = new_set.difference(old_set) #NOT NEEDED?
 
+    ret_set = set([])
     old_map = dict(zip(ids, times))
     new_map = dict(zip(new_ids, new_times))
     for key in new_map:

@@ -1,3 +1,4 @@
+
 import sqlite3
 import argparse
 import numpy as np
@@ -31,16 +32,16 @@ parser.add_argument("--expr", nargs="+")
 parser.add_argument("--sample", type=int, default=100)
 parser.add_argument("--norm", action='store_true')
 parser.add_argument("--log", action='store_true')
-
+parser.add_argument("--db",  type=str, default='threads.db')
 
 args= parser.parse_args()
 exprs = args.expr
 sample = args.sample
 norm = args.norm
 use_log_scale = args.log
+db_name = args.db
 
-
-con = sqlite3.connect("threads.db")
+con = sqlite3.connect(db_name)
 cur = con.cursor()
 
 locator = mdates.AutoDateLocator(minticks=5, maxticks=10)
