@@ -18,7 +18,7 @@ Currently the database must contain a table named 'threads', which must contain 
 
 For compatibility with further improvements, the table must be defined specifically this way:
 
-´´´
+```
 (
 id INTEGER PRIMARY KEY,
 parent_id INTEGER,
@@ -27,7 +27,7 @@ date TEXT,
 date_unix INTEGER,
 content TEXT
 )
-´´´
+```
 
 ### analyze.py
 
